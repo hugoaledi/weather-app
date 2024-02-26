@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-3">
+    <label for="city" class="form-label">Cidade</label>
+    <select id="city" class="form-select" [(ngModel)]="selectedCity" (change)="onChangeCity()">
+      <option *ngFor="let city of cities" [ngValue]="city">{{city.name}}</option>
+    </select>
+  </div>
+</div>
+
+<app-weather-card [weather]="weather"></app-weather-card>

@@ -1,0 +1,16 @@
+<div class="row" *ngIf="weather">
+  <div class="col-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{weather.name}}</h5>
+        <p class="card-text">{{weather.date | date: 'dd/MM/yyyy'}}</p>
+        <p class="card-text">{{weather.description | titlecase}}</p>
+        <p class="card-text">Temp. Atual: {{weather.temp}}ºc</p>
+        <p class="card-text">Sensação: {{weather.feelsLike}}ºc</p>
+        <p class="card-text">Mínima: {{weather.tempMin}}ºc</p>
+        <p class="card-text">Máxima: {{weather.tempMax}}ºc</p>
+        <p class="card-text">Humidade: {{weather.humidity}}%</p>
+      </div>
+    </div>
+  </div>
+</div>
